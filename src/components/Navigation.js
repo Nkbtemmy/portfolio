@@ -48,7 +48,7 @@ export default class Navigation extends Component {
                         </div>
 
                         <div className={this.state.className} id="icon" onClick={this.hiden}>
-                            <i className="fas fa-bars fa-3x"></i>
+                            <i className="fa fa-bars fa-3x"></i>
                         </div>
                         
                     </div>
