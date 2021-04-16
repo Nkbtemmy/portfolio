@@ -5,8 +5,8 @@ import React, { Component } from 'react'
 export default class About extends Component {
     render() {
         return (
-            <div className="section" id="about">
-                <section className="about" >
+            // <div className="section" id="about">
+                <div className="about" >
                     <div className="max-width">
                         <h2 className="title">About me</h2>
                         <div className="about-content">
@@ -16,12 +16,12 @@ export default class About extends Component {
                             <div className="column right">
                                 <div className="text">I'm Emmanuel and I'm a <span class="typing-2"></span></div>
                                 <p>hello peopele from west side , here is your boy Mr NKUBITO from East side happy to be with you , welcaome hood,,, hello peopele from west side , here is your boy Mr NKUBITO from East side happy to be with you , welcaome hood</p>
-                                <a href="#xczc.cd">Download my CV</a>
+                                <a href="https://drive.google.com/file/d/1SnverdIArno35QaI4OjLA7UMaqnEPu1P/view?usp=sharing"  download>Download my CV </a>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            // </div> 
         )
     }
 }
