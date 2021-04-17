@@ -4,6 +4,8 @@ import Navigation from '../components/Navigation'
 import Homes from '../components/Home'
 import About from '../components/About'
 import Service from '../components/Services'
+import Skills from '../components/Skills'
+import Contact from '../components/Contact'
 import './../assets/styles/styles.scss'
 
 class Home extends Component {
@@ -11,9 +13,13 @@ class Home extends Component {
         return (
             <div>
                 <Navigation />
+
                 <Homes />
                 <About />
                 <Service />
+                <Skills />
+                <Contact />
+           
             </div>
         )
     }

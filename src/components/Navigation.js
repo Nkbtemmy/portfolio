@@ -91,7 +91,7 @@ export default class Navigation extends Component {
                                     smooth={true}
                                     offset={-50}
                                     duration={600}
-                                    to="Skills">Skills
+                                    to="skills">Skills
                                     </Link>
                             </li>
                              <li>

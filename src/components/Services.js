@@ -24,13 +24,6 @@ export default class Services extends Component {
                             </div>  
                             <div className="card">
                                 <div className="box">
-                                    <i className="fa fa-facebook"></i>
-                                    <div className="text">Advertising</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
-                                </div>
-                            </div>
-                            <div className="card">
-                                <div className="box">
                                     <i className="fa fa-code"></i>
                                     <div className="text">Apps Develop</div>
                                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
