@@ -343,9 +343,10 @@ section .title::after{
                         width: 45%;
                         img{
                               height: 40vh;
-                              width: 40vh;
+                              width: 42vh;
                               object-fit: cover;
                               border-radius: 13px;
+                              box-shadow: 2px 10px 23px black;
                         }
                   }
                   .right{

@@ -9,17 +9,15 @@ import Contact from '../components/Contact'
 import './../assets/styles/styles.scss'
 
 class Home extends Component {
-    render() {
+        render() {
         return (
             <div>
                 <Navigation />
-
                 <Homes />
                 <About />
                 <Service />
                 <Skills />
-                <Contact />
-           
+                <Contact />          
             </div>
         )
     }
