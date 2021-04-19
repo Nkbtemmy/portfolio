@@ -12,7 +12,7 @@ export default class About extends Component {
                                 <img src="https://res.cloudinary.com/http-voicetoworld-netlify-app/image/upload/v1618775680/my%20pictures/DSCN2362_jdx50v.jpg" alt="my profile pictures"/>
                             </div>
                             <div className="column right">
-                                <div className="text">I'm Emmanuel and I'm a &nbsp;
+                                <div className="text">I'm Emmanuel NKUBITO and I'm a &nbsp;
                                   <span class="typing-2">
                                     <Typed
                                         strings={[
