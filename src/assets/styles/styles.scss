@@ -821,7 +821,12 @@ section .title::after{
                   }
             }
          }
-   }
+   }   
+      .about .max-width .about-content .left img{
+            // height: 350px;
+            width: 320px;
+      }
+
 
 }
 
