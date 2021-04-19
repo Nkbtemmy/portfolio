@@ -17,7 +17,7 @@ export default class Navigation extends Component {
 
             var nav1 = document.getElementById("nav_black");
 
-            if (window.scrollY > 650) {
+            if (window.scrollY >0) {
                 nav1.classList.add("black");
             }
             else {
