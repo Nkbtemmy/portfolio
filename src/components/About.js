@@ -25,7 +25,9 @@ export default class About extends Component {
                                     />
                                     </span>
                                 </div>
-                                <p>hello peopele from west side , here is your boy Mr NKUBITO from East side happy to be with you , welcaome hood,,, hello peopele from west side , here is your boy Mr NKUBITO from East side happy to be with you , welcaome hood</p>
+                                <p>And person living in Rwanda,Kigali <br/>
+                                 I'm in the software engineering industry, my daily job involves working with engineers building products and  writing code and applying the engineering practices that goes with it. and i'm suitable to Agile methodology. <br /><br />
+                                 Also i'm Student who is current taking Software and Computer Engineering at University of Rwanda in College of Science and Technology; Focusing mainly on software development . </p>
                                 <a href="https://drive.google.com/file/d/1SnverdIArno35QaI4OjLA7UMaqnEPu1P/view?usp=sharing"  download>Download my CV </a>
                             </div>
                         </div>

@@ -9,7 +9,8 @@ export default class Contact extends Component {
                     <div class="contact-content">
                         <div class="column left">
                             <div class="text">Get in Touch</div>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum corporis fuga corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+                            <p>In time you want to hire me or cantact me for bussiness my door is always open for you; Here there are ways to reach out to me ; fill free to click one of them. <br/><br/> You will get response in less than 24 hours. <br/> <br/> Your Sincerely;
+                             </p>
                             <div class="icons">
                                 <div class="row">
                                     <i class="fa fa-user"></i>
