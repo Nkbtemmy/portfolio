@@ -16,7 +16,21 @@ export default class Contact extends Component {
                                     <i class="fa fa-user"></i>
                                     <div class="info">
                                         <div class="head">Name</div>
-                                        <div class="sub-title">Emmanuel NKUBITO</div>
+                                        <div class="sub-title"><a href="#contact"> Emmanuel NKUBITO </a></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa fa-github"></i>
+                                    <div class="info">
+                                        <div class="head">Github account</div>
+                                        <div class="sub-title"><a href="https://github.com/nkbtemmy" target="_blank" rel="noopener noreferrer">Github</a></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="fa fa-linkedin"></i>
+                                    <div class="info">
+                                        <div class="head">LinkedIn account</div>
+                                        <div class="sub-title"><a href="https://www.linkedin.com/in/emmanuel-nkubito-36b242155/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
                                     </div>
                                 </div>
                                 <div class="row">
