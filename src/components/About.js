@@ -13,7 +13,7 @@ export default class About extends Component {
                             </div>
                             <div className="column right">
                                 <div className="text">I'm Emmanuel NKUBITO and I'm a &nbsp;
-                                  <span class="typing-2">
+                                  <span className="typing-2">
                                     <Typed
                                         strings={[
                                             '  Software Engineer',
