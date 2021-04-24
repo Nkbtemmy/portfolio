@@ -188,6 +188,12 @@ nav ul li a {
 
 }
 
+.centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 5%;
+  text-align: center;
+}
 
 
 /* all similar content styling codes */
@@ -609,9 +615,9 @@ section .title::after{
 }
 .contact .right form .button{
     height: 47px;
-    width: 170px;
+    width: 12rem;
 }
-.contact .right form .button button{
+.contact .right form .button Button{
     width: 100%;
     height: 100%;
     border: 2px solid crimson;
@@ -624,8 +630,8 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.contact .right form .button button:hover{
-    color: crimson;
+.contact .right form .button Button:hover{
+    color: rgb(11, 12, 75);
     background: none;
 }
 
@@ -790,6 +796,9 @@ section .title::after{
 
 
 @media (max-width: 768px){
+      .centered {
+            left:0;
+      }
     .max-width{
         padding: 0 23px;
     }

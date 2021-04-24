@@ -7,6 +7,7 @@ import Service from '../components/Services'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
 import './../assets/styles/styles.scss'
+import 'bootstrap/dist/css/bootstrap.css';
 
 class Home extends Component {
         render() {

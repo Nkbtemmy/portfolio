@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import Alert from './Alert'
 import axios from 'axios'
+import { Input, Button, Form  } from 'reactstrap';
 
 export default class Contact extends Component {
     constructor(props){
@@ -8,11 +10,25 @@ export default class Contact extends Component {
             name:'',
             email: '',
             subject: '',
-            message: ''
+            message: '',
+            visible:false
         }
     }
     handleChange = e => {
         this.setState({[e.target.name]: e.target.value});
+    }
+    toggle(){
+        this.setState({
+            visible: !this.state.visible,
+        })
+    }
+    clean = () => {
+        this.setState({
+            name:'',
+            email: '',
+            subject: '',
+            message: '',
+        })
     }
     saveMsg = async (e) =>{
         e.preventDefault();
@@ -21,6 +37,7 @@ export default class Contact extends Component {
             {
                 name,email, subject,message
             }).then(res => {
+                this.toggle();
                 console.log(res.data.saveMessage)
             }).catch(err => {
                 console.log('error: ',err);
@@ -66,13 +83,6 @@ export default class Contact extends Component {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <i className="fa fa-envelope"></i>
-                                    <div className="info">
-                                        <div className="head">Email</div>
-                                        <div className="sub-title"><a href="mailto:emmanuelnkubito2@email.com">nkbtemmy2@gmail.com</a></div>
-                                    </div>
-                                </div>
-                                <div className="row">
                                     <i className="fa fa-phone"></i>
                                     <div className="info">
                                         <div className="head">Telephone</div>
@@ -83,28 +93,30 @@ export default class Contact extends Component {
                         </div>
                         <div className="column right">
                             <div className="text">Message me</div>
-                            <form action="" onSubmit={this.saveMsg}>
+
+                            <Form action="" onSubmit={this.saveMsg}>
                                 <div className="fields">
                                     <div className="field name">
-                                        <input type="text" onChange={this.handleChange} name="name" placeholder="Name" required />
+                                        <Input type="text" minlength="3" onChange={this.handleChange} name="name" placeholder="Name" required />
                                     </div>
                                     <div className="field email">
-                                        <input type="email" onChange={this.handleChange} name="email" placeholder="Email" required />
+                                        <Input type="email" onChange={this.handleChange} name="email" placeholder="Email" required />
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <input type="text" onChange={this.handleChange} name="subject" placeholder="Subject" required />
+                                    <Input type="text" minlength="5" onChange={this.handleChange} name="subject" placeholder="Subject" required />
                                 </div>
                                 <div className="field textarea">
-                                    <textarea cols="30" rows="10" onChange={this.handleChange} name="message" placeholder="Message.." required></textarea>
+                                    <Input type="textarea"  cols="5Control 0" minlength="10" rows="10" onChange={this.handleChange} name="message" placeholder="Message.." required></Input>
                                 </div>
                                 <div className="button">
-                                    <button type="submit">Send message</button>
+                                    <Button color="danger" type="submit" onClick={this.clear}>Send message</Button>
                                 </div>
-                            </form>
+                            </Form>
                         </div>
                     </div>
                 </div>
+            <Alert visible={this.state.visible} toggle={this.toggle.bind(this)}/>
             </section>
         )
     }
