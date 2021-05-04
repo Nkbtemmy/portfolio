@@ -5,7 +5,6 @@
 box-sizing: border-box;
     text-decoration: none;
 }
-
 html, body {
     font-family: "Roboto"
 }
@@ -142,6 +141,7 @@ nav ul li a {
       }
 
       #nav_black {
+            //height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -165,7 +165,7 @@ nav ul li a {
 
       .showing {
             max-height: 34em;
-            width: 100%;
+            min-width: 110%;
             padding: 1.3rem 2rem;
             box-shadow: 0 2px 5px 0 rgba(0,0,0,0.4);
             background:#040F23;
@@ -253,7 +253,7 @@ section .title::after{
 //Home page
 .home{
     display: flex;
-    background: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fprofiledps.com%2Fdownload.php%3Fid%3Ddp_new-profile-dps-for-boys-display-photo2014-06-23_14-15-51_3.jpg&f=1&nofb=1") no-repeat center;
+    background: url("../photos/background.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -384,6 +384,7 @@ section .title::after{
                               :hover{
                                     color: crimson;
                                     background: none;
+                                    text-decoration: none;
                               }   
                         }
                   }
@@ -443,11 +444,12 @@ section .title::after{
       display: flex;
        height: 80vh;
       align-items: center;
-      justify-content: space-between;
+      //justify-content: space-between;
+      justify-content: center;
       .card{
             margin: 2px 12px;
             width: calc(33% - 20px);
-            background: #1859d1;
+            background: #1f3050;
             text-align: center;
             border-radius: 6px;
             padding: 20px 25px;
@@ -482,7 +484,7 @@ section .title::after{
 /* skills section styling */
 
 .skills{
-      // background: chocolate;
+      //background: chocolate;
       // padding-top: 3px;
       // height:150vh;
 
@@ -491,49 +493,66 @@ section .title::after{
             text-align: center;
             padding-top: 12px;
       }
-      h2{
-            text-align: center;
-            padding-top: 2%;
-            text-decoration: underline;
-      }
-   
-      .row {
-            margin: 0px 15px;
-            :after {
-                  content: "";
-                  display: table;
-                  clear: both;
-            }
-            .column {
-                  float: left;
-                  width: 15%;
-                  margin:2%;
-                  text-align:center;
-                  display:flex;
-                  :hover {
-                        width: 80%;
-                  }
-                  /* Style the counter cards */
-                  .card {
-                        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-                        padding: 16px;
-                        text-align: center;
-                        background-color: #f1f1f1;
-                        border-radius:18px;
-                        img{
-                              width: 100%;
-                              height: 150px;
-                        }
-                  }
-            }
+      .titles{
+                  position: relative;
+                  text-align: center;
+                  color: #1859d1;
+                  font-size: 40px;
+                  font-weight: 500;
+                  margin-bottom: 60px;
+                  margin-top:  60px;
+                  padding-bottom: 20px;
+                  font-family: 'Ubuntu', sans-serif;
+                  text-decoration: underline;
       }
 
+      .flexWrap {
+            display: flex;
+            width: 100%;
+            text-align:center;
+            border-radius:5%;
+            align-items:center;
+            justify-content:center;
+            
+      
+
+      }
+      .flexCol {
+            box-sizing: border-box;
+            padding: 0px;
+            width: 25%;
+            margin:5px;
+            border-radius:5%;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+      }
+      .flexCol:hover{
+            background: rgba(0, 0, 0, -10.2);
+            width: 30%;
+            position: relative;
+            margin:25px;
+            animation-name: spin;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+      }
+      .flexCol img{  
+            width:100%;
+            height:25vh;
+      }
+
+      @keyframes spin {
+            from{
+                  transform: rotateY(0deg);
+            }
+            to{
+                  transform: rotateY(360deg);
+            }
+      }
+     
 }
 
 /* contact section styling */
 .contact {
-      // background: red;
-      padding-top: 190px;
       .title::after{
             content: "get in touch";
       }
@@ -636,13 +655,6 @@ section .title::after{
 }
 
 
-
-
-
-
-
-
-
 /* responsive media query start */
 @media (max-width: 1300px) {
     .home {
@@ -710,7 +722,7 @@ section .title::after{
                   }
             }
       }
-      .skills .skills-content .column,
+     
       .contact .contact-content .column{
             width: 100%;
             margin-bottom: 35px;
@@ -766,8 +778,7 @@ section .title::after{
                   }
            }
     }
-    .about .about-content .right .text,
-    .skills .skills-content .left .text{
+    .about .about-content .right .text{
         font-size: 19px;
     }
     .contact{
@@ -794,9 +805,18 @@ section .title::after{
 }
 
 
+/* (B) BREAK DOWN 1 COLUMN ON SMALL SCREENS */
+@media only screen and (max-width: 768px) {
+ .skills{
+            .flexWrap { flex-wrap: wrap; }
+            .flexCol { width: 100%; }
+            .flexCol:hover{
+                        background: rgba(0, 0, 0, 0.2);
+                        width: 90%;
+                  }
+ }
 
-@media (max-width: 768px){
-      .centered {
+.centered {
             left:0;
       }
     .max-width{
@@ -859,19 +879,7 @@ section .title::after{
       .about .max-width .about-content .right a{
             font-size: 15px;
       }
-         .skills{
-            .row{
-                  .column {
-                        width: 80%;
-                        display: block;
-                        margin: 10px 3% auto;
-                        :hover {
-                              width: 85%;
-                              margin: 5px 8% auto;
-                        }
-                  }
-            }
-      }
+      
 }
 @media (max-width: 374px) {
       .services{     
@@ -882,10 +890,3 @@ section .title::after{
       }
 
 }
-
-
-
-
-
-
-

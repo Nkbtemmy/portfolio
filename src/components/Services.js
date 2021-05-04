@@ -28,8 +28,7 @@ export default class Services extends Component {
                                     <div className="text">Apps Develop</div>
                                     <p>I develop systems and softwares ; so that i make life easier. By beleiving that Imagination is the beginning of creation.</p>
                                 </div>
-                            </div>    
-
+                            </div>  
                         </div>
                     </div>
                 </div>
