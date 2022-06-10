@@ -1,6 +1,27 @@
 import React, { Component } from 'react'
 import Card from './Card'
-
+let frontend = [
+       {
+        src:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F500%2F1*cPh7ujRIfcHAy4kW2ADGOw.png&f=1&nofb=1",
+        name:"Reactjs"
+       },
+       {
+        src:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffossbytes.com%2Fwp-content%2Fuploads%2F2017%2F01%2FJavascript.png&f=1&nofb=1",
+        name:"javascript"
+       },
+       {
+        src:"https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcly7796.net%2Fwp%2Fwp-content%2Fuploads%2F2015%2F05%2Fscss.jpg&f=1&nofb=1",
+        name:"s(css)"
+       },
+       {
+        src:"https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.webdevelopmenthelp.net%2Fwp-content%2Fuploads%2F2015%2F09%2FHTML55.png&f=1&nofb=1",
+        name:"HTML5"
+       },
+       {
+        src:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ittrainingnepal.com%2Fpublic%2Fcourses%2F19041291016JSP-course.jpg&f=1&nofb=1",
+        name:"JSp"
+       }
+    ]
 export default class Skills extends Component {
     render() {
         return (
@@ -10,11 +31,13 @@ export default class Skills extends Component {
                 </h1>
                 <h2 className="titles">Frontend</h2>
                 <div className="flexWrap">
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F500%2F1*cPh7ujRIfcHAy4kW2ADGOw.png&f=1&nofb=1" name="Reactjs"/>
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffossbytes.com%2Fwp-content%2Fuploads%2F2017%2F01%2FJavascript.png&f=1&nofb=1" name="javascript" />
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcly7796.net%2Fwp%2Fwp-content%2Fuploads%2F2015%2F05%2Fscss.jpg&f=1&nofb=1" name="s(css)" />
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.webdevelopmenthelp.net%2Fwp-content%2Fuploads%2F2015%2F09%2FHTML55.png&f=1&nofb=1" name="HTML5" />
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ittrainingnepal.com%2Fpublic%2Fcourses%2F19041291016JSP-course.jpg&f=1&nofb=1" name="JSp"/>
+                    {
+                        frontend.map((el)=>{
+                            return(
+                                <Card key={el.id} src={el.src} name={el.name} />
+                            )
+                        })
+                    }
                 </div>
                 <h2 className="titles">Backend</h2>
                 <div className="flexWrap">

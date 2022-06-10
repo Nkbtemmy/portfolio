@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import Alert from './Alert'
+///import Alert from './Alert'
 import axios from 'axios'
 import { Input, Button, Form  } from 'reactstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default class Contact extends Component {
     constructor(props){
@@ -10,11 +12,19 @@ export default class Contact extends Component {
             name:'',
             email: '',
             subject: '',
+            dob:'2002-01-12',
             message: '',
             visible:false
-        }
+        };
+        this.baseState = {emailError:'',passwordError:'' }
     }
+    notify = () => toast("Thank you for contacting us; you will get to you in less than 24 hours!");
+    notifyError = () => toast.error('Sorry there is technical problem!', {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 2000,
+      })
     handleChange = e => {
+        e.preventDefault()
         this.setState({[e.target.name]: e.target.value});
     }
     toggle(){
@@ -22,27 +32,36 @@ export default class Contact extends Component {
             visible: !this.state.visible,
         })
     }
+    reset = () => {
+        this.setState(this.baseState)
+    }
     clean = () => {
         this.setState({
             name:'',
             email: '',
             subject: '',
             message: '',
+            dob:'2002-01-12',
         })
     }
     saveMsg = async (e) =>{
         e.preventDefault();
-        const { name,email, subject,message } = this.state
-        await axios.post("https://voicetoworld.herokuapp.com/api/v1/sendMessage",
+        const { name,email, subject,message,dob } = this.state
+        await axios.post("http://localhost:2300/api/v1/sendMessage",
             {
-                name,email, subject,message
+                name,email, subject,message,dob
             }).then(res => {
+                this.reset()
+                this.clean();
                 this.toggle();
+                this.notify();
                 console.log(res.data.saveMessage)
             }).catch(err => {
+                this.notifyError();
                 console.log('error: ',err);
             });
     }
+
     render() {
         return (
             <section className="contact" id="contact">
@@ -93,30 +112,33 @@ export default class Contact extends Component {
                         </div>
                         <div className="column right">
                             <div className="text">Message me</div>
-
+                            <ToastContainer />
                             <Form action="" onSubmit={this.saveMsg}>
                                 <div className="fields">
                                     <div className="field name">
-                                        <Input type="text" minlength="3" onChange={this.handleChange} name="name" placeholder="Name" required />
+                                        <Input type="text" minlength="3" onChange={this.handleChange} value={this.state.name} name="name" placeholder="Name" required />
                                     </div>
                                     <div className="field email">
-                                        <Input type="email" onChange={this.handleChange} name="email" placeholder="Email" required />
+                                        <Input type="email" onChange={this.handleChange} name="email" value={this.state.email} placeholder="Email" required />
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <Input type="text" minlength="5" onChange={this.handleChange} name="subject" placeholder="Subject" required />
+                                    <Input type="text" minlength="5" onChange={this.handleChange} value={this.state.subject} name="subject" placeholder="Subject" required />
                                 </div>
                                 <div className="field textarea">
-                                    <Input type="textarea"  cols="5Control 0" minlength="10" rows="10" onChange={this.handleChange} name="message" placeholder="Message.." required></Input>
+                                    <Input type="textarea"  cols="5Control 0" minlength="10" rows="10" onChange={this.handleChange} value={this.state.message} name="message" placeholder="Message.." required></Input>
+                                </div>
+                                <div className="field textarea">
+                                    <Input type="date"  cols="5Control 0" minlength="10" rows="10" onChange={this.handleChange} name="dob" value={this.state.dob} required></Input>
                                 </div>
                                 <div className="button">
-                                    <Button color="danger" type="submit" onClick={this.clear}>Send message</Button>
+                                    <Button color="danger" type="submit">Send message</Button>
                                 </div>
                             </Form>
                         </div>
                     </div>
                 </div>
-            <Alert visible={this.state.visible} toggle={this.toggle.bind(this)}/>
+            {/* <Alert visible={this.state.visible} toggle={this.toggle.bind(this)}/> */}
             </section>
         )
     }
