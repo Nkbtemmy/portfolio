@@ -1,29 +1,51 @@
 import React, { Component } from 'react'
 import Card from './Card'
+import Carousel from 'react-elastic-carousel';
+import react from './../assets/photos/react.png'
+import javascripty from './../assets/photos/javascripty.png'
+import scss from './../assets/photos/scss.png'
+import html from './../assets/photos/html.png'
+import preact from './../assets/photos/preact.png'
+import node from './../assets/photos/nodejs.png'
+import php from './../assets/photos/php.png'
+import springboot from './../assets/photos/springboot.png'
+import drf from './../assets/photos/drf.png'
+import postgres from './../assets/photos/postgres.png'
+import mongodb from './../assets/photos/mongodb.png'
+import firebase from './../assets/photos/firebase.png'
+import mysql from './../assets/photos/mysql.png'
+
+
 let frontend = [
        {
-        src:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F500%2F1*cPh7ujRIfcHAy4kW2ADGOw.png&f=1&nofb=1",
+        src:react,
         name:"Reactjs"
        },
        {
-        src:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffossbytes.com%2Fwp-content%2Fuploads%2F2017%2F01%2FJavascript.png&f=1&nofb=1",
+        src:javascripty,
         name:"javascript"
        },
        {
-        src:"https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcly7796.net%2Fwp%2Fwp-content%2Fuploads%2F2015%2F05%2Fscss.jpg&f=1&nofb=1",
+        src:scss,
         name:"s(css)"
        },
        {
-        src:"https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.webdevelopmenthelp.net%2Fwp-content%2Fuploads%2F2015%2F09%2FHTML55.png&f=1&nofb=1",
+        src:html,
         name:"HTML5"
        },
        {
-        src:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ittrainingnepal.com%2Fpublic%2Fcourses%2F19041291016JSP-course.jpg&f=1&nofb=1",
-        name:"JSp"
+        src:preact,
+        name:"Preact"
        }
     ]
 export default class Skills extends Component {
     render() {
+        const breakPoints = [
+            { width: 1, itemsToShow: 1 },
+            { width: 550, itemsToShow: 2 },
+            { width: 768, itemsToShow: 3 },
+            { width: 1200, itemsToShow: 4 },
+          ];
         return (
           <section className="skills">
                 <h1 className="title">
@@ -31,26 +53,33 @@ export default class Skills extends Component {
                 </h1>
                 <h2 className="titles">Frontend</h2>
                 <div className="flexWrap">
-                    {
-                        frontend.map((el)=>{
-                            return(
-                                <Card key={el.id} src={el.src} name={el.name} />
-                            )
-                        })
-                    }
+                    <Carousel breakPoints={breakPoints}>
+                        {
+                            frontend.map((el)=>{
+                                return(
+                                    <Card key={el.id} src={el.src} name={el.name} />
+                                )
+                            })
+                        }
+                    </Carousel>
                 </div>
                 <h2 className="titles">Backend</h2>
                 <div className="flexWrap">
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.leiue.com%2Fuploads%2F2019%2F03%2FNode.js.png!760&f=1&nofb=1" name="Nodejs"/>
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Flogo-php-png%2Fphp-server-integration-wysiwyg-html-editor-froala-10.png&f=1&nofb=1" name="PHP" />
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebforpc.com%2Fwp-content%2Fuploads%2F2017%2F12%2Fjava-logo.png&f=1&nofb=1" name="JAVA" />
+                    <Carousel breakPoints={breakPoints}>
+                        <Card src={node} name="Nodejs"/>
+                        <Card src={drf} name="Djang rest framework" />
+                        <Card src={springboot} name="Spring Boot" />
+                        <Card src={php} name="PHP" />
+                    </Carousel>
                 </div>
                 <h2 className="titles">Databases</h2>
                 <div className="flexWrap">
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.g2crowd.com%2Fuploads%2Fproduct%2Fimage%2Fsocial_landscape%2Fsocial_landscape_1489695931%2Fpostgresql.png&f=1&nofb=1" name="postgress"/>
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.pcmag.com%2Fmedia%2Fimages%2F506844-mongodb-atlas-logo.jpg%3Fwidth%3D810%26height%3D456&f=1&nofb=1" name="MongoDB/mongoose" />
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-YIfQT6q8ZM4%2FVzyq5z1B8HI%2FAAAAAAAAAAc%2FUmWSSMLKtKgtH7CACElUp12zXkrPK5UoACLcB%2Fs1600%2Fimage00.png&f=1&nofb=1" name="Firebase" />
-                    <Card src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fscibit.com%2Fwp-content%2Fuploads%2Fsites%2F29%2F2016%2F12%2Fmysql.jpg&f=1&nofb=1" name="Mysql" />
+                    <Carousel breakPoints={breakPoints}>
+                        <Card src={postgres} name="postgreSQL"/>
+                        <Card src={mongodb} name="MongoDB/mongoose" />
+                        <Card src={firebase} name="Firebase" />
+                        <Card src={mysql} name="Mysql" />
+                    </Carousel>
                 </div>
           </section>
         )

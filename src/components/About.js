@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Typed from 'react-typed';
-import cv from '../assets/photos/cv1.pdf'
+import cv from '../assets/photos/cv.pdf'
+import profile from '../assets/photos/profile.png'
 
 
 export default class About extends Component {
@@ -12,8 +13,9 @@ export default class About extends Component {
               <div className="about-content">
                 <div className="column left">
                   <img
-                    src="https://res.cloudinary.com/http-voicetoworld-netlify-app/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1622641255/personal/profile_qt7zsa.jpg"
+                    src={profile}
                     alt="my profile pictures"
+                    className=" max-w-none"
                   />
                 </div>
                 <div className="column right">
@@ -47,10 +49,12 @@ export default class About extends Component {
                     <a
                       href="https://resume.io/r/5PtxkUVLr"
                       className="mx-3 bg-dark border border-dark"
+                      target="_blank"
+                      rel="noreferrer"
                     >
                       View My cv &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     </a>
-                    <a href={cv} download="nkubito's cv">
+                    <a href={cv} download="nkubito's cv" rel="noreferrer">
                       Download my CV
                     </a>
                   </div>

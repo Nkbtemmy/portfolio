@@ -47,15 +47,23 @@ export default class Contact extends Component {
     saveMsg = async (e) =>{
         e.preventDefault();
         const { name,email, subject,message,dob } = this.state
-        await axios.post("http://localhost:2300/api/v1/sendMessage",
+        await axios.post("https://voicetoworld.herokuapp.com/api/v1/sendMessage",
             {
                 name,email, subject,message,dob
             }).then(res => {
                 this.reset()
                 this.clean();
                 this.toggle();
-                this.notify();
-                console.log(res.data.saveMessage)
+                console.log(res.data)
+                if(res.data.status === 200){
+                    return toast("Thank you for contacting us; you will get to you in less than 24 hours!")
+                }
+                return (
+                    toast.error('Sorry there is technical problem! please use other meant of contact', {
+                        position: toast.POSITION.TOP_RIGHT,
+                        autoClose: 4000,
+                      })
+                )
             }).catch(err => {
                 this.notifyError();
                 console.log('error: ',err);
@@ -84,21 +92,21 @@ export default class Contact extends Component {
                                     <i className="fa fa-github"></i>
                                     <div className="info">
                                         <div className="head">Github account</div>
-                                        <div className="sub-title"><a href="https://github.com/nkbtemmy" target="_blank" rel="noopener noreferrer">Github</a></div>
+                                        <div className="sub-title"><a href="https://github.com/nkbtemmy" target="_blank" rel="noreferrer">Github</a></div>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <i className="fa fa-linkedin"></i>
                                     <div className="info">
                                         <div className="head">LinkedIn account</div>
-                                        <div className="sub-title"><a href="https://www.linkedin.com/in/emmanuel-nkubito-36b242155/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+                                        <div className="sub-title"><a href="https://www.linkedin.com/in/emmanuel-nkubito-36b242155/" target="_blank" rel="noreferrer">LinkedIn</a></div>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <i className="	fa fa-location-arrow"></i>
                                     <div className="info">
                                         <div className="head">Address</div>
-                                        <div className="sub-title"><a href="https://gps-coordinates.org/my-location.php?lat=-1.9499&lng=30.0666" rel="opener noreferrer" target="_blank"  >Rwanda, Kigali,Kicukiro, Gikondo, KK4Ave</a></div>
+                                        <div className="sub-title"><a href="https://gps-coordinates.org/my-location.php?lat=-1.9499&lng=30.0666" rel="noreferrer" target="_blank"  >Rwanda, Kigali,Kicukiro, Gikondo, KK4Ave</a></div>
                                     </div>
                                 </div>
                                 <div className="row">
@@ -127,9 +135,6 @@ export default class Contact extends Component {
                                 </div>
                                 <div className="field textarea">
                                     <Input type="textarea"  cols="5Control 0" minlength="10" rows="10" onChange={this.handleChange} value={this.state.message} name="message" placeholder="Message.." required></Input>
-                                </div>
-                                <div className="field textarea">
-                                    <Input type="date"  cols="5Control 0" minlength="10" rows="10" onChange={this.handleChange} name="dob" value={this.state.dob} required></Input>
                                 </div>
                                 <div className="button">
                                     <Button color="danger" type="submit">Send message</Button>
