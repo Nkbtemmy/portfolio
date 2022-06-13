@@ -8,9 +8,16 @@ export default class Navigation extends Component {
         this.state = {
             isActive: false,
             className: "menu-icon",
-            hide: "hide"
+            hide: "hide",
+            //showMenu: true
         };
     }
+
+    // toggleMenu() {
+    //     this.setState({showMenu:!this.state.showMenu})
+    //     //this.state.showMenu = !this.state.showMenu //Flips true/false
+    // }
+    
     componentDidMount() {
 
         const scroller = () => {
@@ -38,7 +45,7 @@ export default class Navigation extends Component {
         return (
             <div id="wrapper" className="wrapper">
                 <nav id="nav_black" className={this.state.isActive ? "black" : null}>
-                    <div className="responsive-nav">
+                    <div className="responsive-nav" >
                         <div>
                             <Links to="/" >
                                 <div className="logo" onClick={() => scroll.scrollToTop()}>

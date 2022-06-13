@@ -6,9 +6,8 @@ import About from '../components/About'
 import Service from '../components/Services'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
-// import Demo from '../components/Demo'
+import Slide from '../components/Slides';
 import './../assets/styles/styles.scss'
-import 'bootstrap/dist/css/bootstrap.css';
 
 class Home extends Component {
         render() {
@@ -17,10 +16,10 @@ class Home extends Component {
                 <Navigation />
                 <Homes />
                 <About />
+                <Slide />    
                 <Service />
                 <Skills />
-                <Contact /> 
-                {/* <Demo />          */}
+                <Contact />      
             </div>
         )
     }
