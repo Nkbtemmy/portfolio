@@ -6,7 +6,7 @@ import About from '../components/About'
 import Service from '../components/Services'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
-import Slide from '../components/Slides';
+import Work from '../components/Works';
 import './../assets/styles/styles.scss'
 
 class Home extends Component {
@@ -16,7 +16,7 @@ class Home extends Component {
                 <Navigation />
                 <Homes />
                 <About />
-                <Slide />    
+                <Work />    
                 <Service />
                 <Skills />
                 <Contact />      
