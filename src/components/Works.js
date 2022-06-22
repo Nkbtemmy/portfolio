@@ -5,6 +5,8 @@ import phantom from './../assets/photos/phantom.png'
 import quickar from './../assets/photos/quickar.png'
 import coucoulearn from './../assets/photos/coucou.png'
 import imageRwanda from './../assets/photos/imageRwanda.png'
+import ticket_app from './../assets/photos/ticket_app.png'
+import awesomity from './../assets/photos/awesomity.png'
 
 let works=[
   {
@@ -18,6 +20,11 @@ let works=[
     link:'https://image-rwanda-ft-landing-tphg2i.herokuapp.com/'
   },
   {
+    photo:awesomity,
+    title:"Awesomity APIs",
+    link:'https://task-force-backend-challenge.herokuapp.com/api-docs/'
+   },
+  {
    photo:quickar,
    title:"quickAR",
    link:'https://usequickar.com/'
@@ -26,7 +33,12 @@ let works=[
    photo:coucoulearn,
    title:"Coucoulearn Backend",
    link:'https://coucoulearn.com/'
-  }
+  },
+  {
+    photo:ticket_app,
+    title:"Ticket APP APIs",
+    link:'https://github.com/Nkbtemmy/Ticket-App'
+   },
  
  ]
 export default class Slide extends Component {
