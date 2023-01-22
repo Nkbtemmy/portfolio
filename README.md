@@ -1,3 +1,5 @@
+# Badges
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b8701b8-b681-48a1-a657-c6a728e820ed/deploy-status)](https://app.netlify.com/sites/imanzi/deploys)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
