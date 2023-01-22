@@ -47,7 +47,7 @@ export default class Contact extends Component {
     saveMsg = async (e) =>{
         e.preventDefault();
         const { name,email, subject,message,dob } = this.state
-        await axios.post("https://voicetoworld.herokuapp.com/api/v1/sendMessage",
+        await axios.post(process.env.REACT_APP_CONTACT_US,
             {
                 name,email, subject,message,dob
             }).then(res => {
@@ -55,7 +55,7 @@ export default class Contact extends Component {
                 this.clean();
                 this.toggle();
                 console.log(res.data)
-                if(res.data.status === 200){
+                if(res.data.message === 'Saved successfull'){
                     return toast("Thank you for contacting us; you will get to you in less than 24 hours!")
                 }
                 return (
