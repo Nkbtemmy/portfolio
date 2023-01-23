@@ -36,14 +36,14 @@ export default class About extends Component {
                   </div>
                   <p>
                     And person living in Rwanda,Kigali <br />
-                    I'm in the software engineering industry, my daily job
-                    involves working with engineers building products and
-                    writing code and applying the engineering practices that
-                    goes with it. and i'm suitable to Agile methodology. <br />
-                    <br />
-                    Also i'm Student who is current taking Software and Computer
-                    Engineering at University of Rwanda in College of Science
-                    and Technology; Focusing mainly on software development .{" "}
+                    I am currently working in the software engineering industry,
+                    where my daily responsibilities include collaborating with
+                    a team of engineers to design, build, and implement high-quality software products.
+                    <br/>
+                    This involves writing code, testing and debugging, and following established engineering practices.
+                    Additionally, I am well-versed in Agile methodology and have experience working in Agile development environments. 
+                    This allows me to work efficiently and effectively in fast-paced and constantly changing environments, 
+                    and to continuously deliver value to our customers through regular iterations and feedback. .{" "}
                   </p>
                   <div className="text-center">
                     <a
