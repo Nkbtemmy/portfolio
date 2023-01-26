@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Typed from 'react-typed';
-import cv from '../assets/photos/cv.pdf'
+import cv from '../assets/photos/updatedCV.pdf'
 import profile from '../assets/photos/profile.png'
 
 
@@ -35,8 +35,8 @@ export default class About extends Component {
                     </span>
                   </div>
                   <p>
-                    And person living in Rwanda,Kigali <br />
-                    I am currently working in the software engineering industry,
+                    And person living in Rwanda,Kigali... <br />
+                    Who is currently working in the software engineering industry,
                     where my daily responsibilities include collaborating with
                     a team of engineers to design, build, and implement high-quality software products.
                     <br/>

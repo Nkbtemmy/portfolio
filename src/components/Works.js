@@ -10,9 +10,19 @@ import awesomity from './../assets/photos/awesomity.png'
 
 let works=[
   {
+    photo:coucoulearn,
+    title:"INTSINZI App",
+    link:'https://intsinzi.app/'
+   },
+   {
+    photo:quickar,
+    title:"quickAR",
+    link:'https://usequickar.com/'
+   },
+  {
    photo:phantom,
    title:"Phantom App",
-   link:'https://cabal-frontend-staging.herokuapp.com/'
+   link:'https://github.com/atlp-rwanda/cabal-phantom-frontend/'
   },
   {
     photo:imageRwanda,
@@ -22,18 +32,8 @@ let works=[
   {
     photo:awesomity,
     title:"Awesomity APIs",
-    link:'https://task-force-backend-challenge.herokuapp.com/api-docs/'
+    link:'https://awesomity-be.onrender.com/api-docs/'
    },
-  {
-   photo:quickar,
-   title:"quickAR",
-   link:'https://usequickar.com/'
-  },
-  {
-   photo:coucoulearn,
-   title:"Coucoulearn Backend",
-   link:'https://coucoulearn.com/'
-  },
   {
     photo:ticket_app,
     title:"Ticket APP APIs",
