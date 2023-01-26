@@ -14,7 +14,9 @@ import postgres from './../assets/photos/postgres.png'
 import mongodb from './../assets/photos/mongodb.png'
 import firebase from './../assets/photos/firebase.png'
 import mysql from './../assets/photos/mysql.png'
-
+import docker from './../assets/photos/docker.jpg'
+import githubAction from './../assets/photos/github-actions.jpg'
+import travisCi from './../assets/photos/travis-ci.jpg'
 
 
 let frontend = [
@@ -80,6 +82,14 @@ export default class Skills extends Component {
                         <Card src={mongodb} name="MongoDB/mongoose" />
                         <Card src={firebase} name="Firebase" />
                         <Card src={mysql} name="Mysql" />
+                    </Carousel>
+                </div>
+                <h2 className="titles">DevOps</h2>
+                <div className="flexWrap">
+                    <Carousel breakPoints={breakPoints}>
+                        <Card src={docker} name="Containerization"/>
+                        <Card src={githubAction} name="Github Actions" />
+                        <Card src={travisCi} name="Continuous Integration" />
                     </Carousel>
                 </div>
           </section>
