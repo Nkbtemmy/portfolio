@@ -7,20 +7,40 @@ import Service from '../components/Services'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
 import Work from '../components/Works';
+import { FullPage, Slide } from 'react-full-page';
 import './../assets/styles/styles.scss'
 
 class Home extends Component {
         render() {
         return (
-            <div>
+            // <div>
+            //     <Navigation />
+            //     <Homes />
+            //     <About />
+            //     <Work />    
+            //     <Service />
+            //     <Skills />
+            //     <Contact />      
+            // </div>
+            <FullPage>
                 <Navigation />
-                <Homes />
-                <About />
-                <Work />    
-                <Service />
-                <Skills />
-                <Contact />      
-            </div>
+                <Slide>
+                    <Homes />  
+                </Slide>
+                <Slide>
+                    <About />
+                </Slide>
+                <Slide>
+                    <Work />
+                </Slide>
+                <Slide>
+                    <Service />
+                </Slide>
+                <Slide>
+                    <Skills />
+                    <Contact />  
+                </Slide>
+            </FullPage>
         )
     }
 }
