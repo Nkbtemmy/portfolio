@@ -88,6 +88,16 @@ export default class Navigation extends Component {
                                     smooth={true}
                                     offset={-50}
                                     duration={600}
+                                    to="work">My Works
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    className="header__menu__item"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-50}
+                                    duration={600}
                                     to="services">Services
                                     </Link>
                             </li>

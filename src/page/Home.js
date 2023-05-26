@@ -7,6 +7,7 @@ import Service from '../components/Services'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
 import Work from '../components/Works';
+import { FullPage, Slide } from 'react-full-page';
 import './../assets/styles/styles.scss'
 
 class Home extends Component {
@@ -19,8 +20,30 @@ class Home extends Component {
                 <Work />    
                 <Service />
                 <Skills />
+                <div></div>
                 <Contact />      
             </div>
+            // <FullPage>
+            //     <Navigation />
+            //     <Slide>
+            //         <Homes />  
+            //     </Slide>
+            //     <Slide>
+            //         <About />
+            //     </Slide>
+            //     <Slide>
+            //         <Work />
+            //     </Slide>
+            //     <Slide>
+            //         <Service />
+            //     </Slide>
+            //     <Slide>
+            //         <Contact />
+            //     </Slide>
+            //     <Slide>
+            //         <Skills /> 
+            //     </Slide>
+            // </FullPage>
         )
     }
 }
