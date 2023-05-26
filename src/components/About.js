@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Typed from 'react-typed';
 import cv from '../assets/photos/updatedCV.pdf'
-import profile from '../assets/photos/profile.png'
+import profile from '../assets/photos/profile2.png'
 
 
 export default class About extends Component {
@@ -11,22 +11,16 @@ export default class About extends Component {
             <div className="max-width">
               <h2 className="title">About me</h2>
               <div className="about-content">
-                <div className="column left">
-                  <img
-                    src={profile}
-                    alt="my profile pictures"
-                    className=" max-w-none"
-                  />
-                </div>
+   
                 <div className="column right">
                   <div className="text">
-                    I'm Emmanuel NKUBITO and I'm a &nbsp;
+                    Hello; I'm Emmanuel NKUBITO, a &nbsp;
                     <span className="typing-2">
                       <Typed
                         strings={[
                           "  Software Engineer",
                           "  Web Developer",
-                          "  Network Engineer",
+                          "  Team Lead",
                         ]}
                         typeSpeed={40}
                         backSpeed={50}
@@ -40,10 +34,11 @@ export default class About extends Component {
                     where my daily responsibilities include collaborating with
                     a team of engineers to design, build, and implement high-quality software products.
                     <br/>
-                    This involves writing code, testing and debugging, and following established engineering practices.
-                    Additionally, I am well-versed in Agile methodology and have experience working in Agile development environments. 
-                    This allows me to work efficiently and effectively in fast-paced and constantly changing environments, 
-                    and to continuously deliver value to our customers through regular iterations and feedback. .{" "}
+                    Additionally, I am well-versed in Agile methodology and have
+                    experience working in Agile development environments. This
+                    allows me to work efficiently and effectively in fast-paced and
+                    constantly changing environments, delivering value through
+                    regular iterations and feedback.{" "}
                   </p>
                   <div className="text-center">
                     <a
@@ -58,6 +53,13 @@ export default class About extends Component {
                       Download my CV
                     </a>
                   </div>
+                </div>
+                <div className="column">
+                  <img
+                    src={profile}
+                    alt="my profile pictures"
+                    className="max-w-none sm:hidden md:block"
+                  />
                 </div>
               </div>
             </div>

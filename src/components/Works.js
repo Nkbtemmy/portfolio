@@ -18,11 +18,6 @@ let works=[
     link:'https://acms-api.amalitech-dev.net/docs'
   },
   {
-    photo:codehill,
-    title:"HR App",
-    link:'https://codehills-hr-app.netlify.app/'
-  },
-  {
     photo:barefoot,
     title:"Barefoot Normad",
     link:'https://barefoot6.netlify.app/'
@@ -41,6 +36,11 @@ let works=[
    photo:phantom,
    title:"Phantom App",
    link:'https://github.com/atlp-rwanda/cabal-phantom-frontend/'
+  },
+  {
+    photo:codehill,
+    title:"HR App",
+    link:'https://codehills-hr-app.netlify.app/'
   },
   {
     photo:imageRwanda,
@@ -70,7 +70,7 @@ export default class Slide extends Component {
     const carouselSettings = {
       breakPoints: breakPoints,
       enableAutoPlay: true,
-      autoPlaySpeed: 3000, // Adjust the duration (in milliseconds) between each slide
+      autoPlaySpeed: 30000, // Adjust the duration (in milliseconds) between each slide
       enableInfiniteLoop: true, // Enable infinite looping
   };
     return (

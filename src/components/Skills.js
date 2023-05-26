@@ -53,7 +53,7 @@ const Skills = () => {
   const carouselSettings = {
     breakPoints: breakPoints,
     enableAutoPlay: true,
-    autoPlaySpeed: 3000, // Adjust the duration (in milliseconds) between each slide
+    autoPlaySpeed: 5000, // Adjust the duration (in milliseconds) between each slide
     enableInfiniteLoop: true, // Enable infinite looping
   };
 
@@ -66,36 +66,14 @@ const onNextStart = (currentItem, nextItem) => {
   const onPrevStart = (currentItem, nextItem) => {
     if (currentItem.index === nextItem.index) {
       // we hit the first item, go to last item
-      carouselRef.current.goTo(1);
+      carouselRef.current.goTo(0);
     }
   };
   return (
     <section className="skills">
         <h1 className="title">Skills</h1>
-        <h2 className="titles">Frontend</h2>
-        <div className="flexWrap">
-        <Carousel
-            ref={carouselRef}
-            // pagination={false}
-            {...carouselSettings}
-            // onNextEnd={({ index }) => {
-            //     clearTimeout(resetTimeout);
-            //     resetTimeout = setTimeout(() => {
-            //         carouselRef?.current?.goTo(0);
-            //     }, 3000); // same time
-            // }}
-            onPrevStart={onPrevStart}
-            onNextStart={onNextStart}
-            disableArrowsOnEnd={false}
-            
-        >
-            {frontend.map((el, index) => (
-            <Card key={index} src={el.src} name={el.name} />
-            ))}
-        </Carousel>
-        </div>
         <h2 className="titles">Backend</h2>
-        <div className="flexWrap">
+        <div className="flexWrap h-[250px]">
             <Carousel 
                 breakPoints={breakPoints}
                 ref={carouselRef}
@@ -108,8 +86,30 @@ const onNextStart = (currentItem, nextItem) => {
                 <Card src={php} name="PHP" />
             </Carousel>
         </div>
+        <h2 className="titles">Frontend</h2>
+        <div className="flexWraap">
+        <Carousel
+            ref={carouselRef}
+            // pagination={false}
+            {...carouselSettings}
+            // onNextEnd={({ index }) => {
+            //     clearTimeout(resetTimeout);
+            //     resetTimeout = setTimeout(() => {
+            //         carouselRef?.current?.goTo(0);
+            //     }, 5000); // same time
+            // }}
+            onPrevStart={onPrevStart}
+            onNextStart={onNextStart}
+            disableArrowsOnEnd={false}
+            
+        >
+            {frontend.map((el, index) => (
+            <Card key={index} src={el.src} name={el.name} />
+            ))}
+        </Carousel>
+        </div>
         <h2 className="titles">Databases</h2>
-        <div className="flexWrap">
+        <div className="flexWrap h-[250px]">
             <Carousel 
                 breakPoints={breakPoints}
                 ref={carouselRef}
@@ -123,7 +123,7 @@ const onNextStart = (currentItem, nextItem) => {
             </Carousel>
         </div>
         <h2 className="titles">DevOps</h2>
-        <div className="flexWrap">
+        <div className="flexsWrap">
             <Carousel 
                 breakPoints={breakPoints}
                 ref={carouselRef}

@@ -72,9 +72,9 @@ export default class Contact extends Component {
 
     render() {
         return (
-            <section className="contact" id="contact">
+            <section className="contact h-full bg-yellow-300 relative" id="contact">
                 <div className="max-width">
-                    <h2 className="title">Contact me</h2>
+                    {/* <h2 className="title">Contact me</h2> */}
                     <div className="contact-content">
                         <div className="column left">
                             <div className="text">Get in Touch</div>

@@ -13,34 +13,37 @@ import './../assets/styles/styles.scss'
 class Home extends Component {
         render() {
         return (
-            // <div>
-            //     <Navigation />
-            //     <Homes />
-            //     <About />
-            //     <Work />    
-            //     <Service />
-            //     <Skills />
-            //     <Contact />      
-            // </div>
-            <FullPage>
+            <div>
                 <Navigation />
-                <Slide>
-                    <Homes />  
-                </Slide>
-                <Slide>
-                    <About />
-                </Slide>
-                <Slide>
-                    <Work />
-                </Slide>
-                <Slide>
-                    <Service />
-                </Slide>
-                <Slide>
-                    <Skills />
-                    <Contact />  
-                </Slide>
-            </FullPage>
+                <Homes />
+                <About />
+                <Work />    
+                <Service />
+                <Skills />
+                <div></div>
+                <Contact />      
+            </div>
+            // <FullPage>
+            //     <Navigation />
+            //     <Slide>
+            //         <Homes />  
+            //     </Slide>
+            //     <Slide>
+            //         <About />
+            //     </Slide>
+            //     <Slide>
+            //         <Work />
+            //     </Slide>
+            //     <Slide>
+            //         <Service />
+            //     </Slide>
+            //     <Slide>
+            //         <Contact />
+            //     </Slide>
+            //     <Slide>
+            //         <Skills /> 
+            //     </Slide>
+            // </FullPage>
         )
     }
 }
