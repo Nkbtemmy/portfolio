@@ -7,8 +7,26 @@ import coucoulearn from './../assets/photos/coucou.png'
 import imageRwanda from './../assets/photos/imageRwanda.png'
 import ticket_app from './../assets/photos/ticket_app.png'
 import awesomity from './../assets/photos/awesomity.png'
+import ACMS from './../assets/photos/ACMS.png'
+import barefoot from './../assets/photos/barefoot.png'
+import codehill from './../assets/photos/codehill.png'
 
 let works=[
+  {
+    photo:ACMS,
+    title:"ACMS",
+    link:'https://acms-api.amalitech-dev.net/docs'
+  },
+  {
+    photo:codehill,
+    title:"HR App",
+    link:'https://codehills-hr-app.netlify.app/'
+  },
+  {
+    photo:barefoot,
+    title:"Barefoot Normad",
+    link:'https://barefoot6.netlify.app/'
+  },
   {
     photo:coucoulearn,
     title:"INTSINZI App",
@@ -49,10 +67,16 @@ export default class Slide extends Component {
       { width: 768, itemsToShow: 3 },
       { width: 1200, itemsToShow: 4 },
     ];
+    const carouselSettings = {
+      breakPoints: breakPoints,
+      enableAutoPlay: true,
+      autoPlaySpeed: 3000, // Adjust the duration (in milliseconds) between each slide
+      enableInfiniteLoop: true, // Enable infinite looping
+  };
     return (
      <div className=' h-screen justify-around bg-indigo-300 px-8 pt-10 pb-12 space-x-6 '>
       <h1 style={{ textAlign: "center" }} className="my-6 font-black text-3xl text-white">My Work</h1>
-      <Carousel breakPoints={breakPoints}>
+      <Carousel {...carouselSettings}>
         {
           works.map((work)=>{
             return(
