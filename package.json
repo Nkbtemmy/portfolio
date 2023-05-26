@@ -14,7 +14,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-elastic-carousel": "^0.11.5",
-    "react-full-page": "^0.1.12",
     "react-geolocated": "^3.2.0",
     "react-leaflet": "^3.1.0",
     "react-router-dom": "^5.2.0",
