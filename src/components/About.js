@@ -28,18 +28,15 @@ export default class About extends Component {
                       />
                     </span>
                   </div>
-                  <p>
-                    And person living in Rwanda,Kigali... <br />
-                    Who is currently working in the software engineering industry,
-                    where my daily responsibilities include collaborating with
-                    a team of engineers to design, build, and implement high-quality software products.
-                    <br/>
-                    Additionally, I am well-versed in Agile methodology and have
-                    experience working in Agile development environments. This
-                    allows me to work efficiently and effectively in fast-paced and
-                    constantly changing environments, delivering value through
-                    regular iterations and feedback.{" "}
-                  </p>
+
+
+                         <div className="text-sm text-slate-700 space-y-4">
+  <p> A results-driven software professional passionate about innovative solutions. My experience ranges from backend to full-stack projects, and I'm always eager to adapt to new technologies.</p>
+  <p>Throughout my career, I design scalable, efficient, and robust applications. Strong problem-solving and attention to detail ensure high-quality solutions for users and businesses.</p>
+  <p>I find joy in collaborating with diverse teams, fostering creative work environments. Constantly seeking opportunities to grow professionally, I thrive in fast-paced settings.</p>
+  <p>Whether developing backend systems, architecting full-stack applications, or tackling challenging projects, I commit to delivering excellence and positive impacts through technology.</p>
+</div> 
+
                   <div className="text-center">
                     <a
                       href="https://resume.io/r/5PtxkUVLr"
